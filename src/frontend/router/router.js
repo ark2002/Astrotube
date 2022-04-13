@@ -1,17 +1,23 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import { HistoryScreen, LandingScreen, ListingScreen, PageNotFoundScreen, PlaylistsScreen, SigninScreen, SignupScreen, WatchLaterScreen } from "../screens";
+import { PrivateRoute } from "../components";
+import { useAuth } from "../context";
 
 const Router = () => {
+
+    const { auth: { status } } = useAuth()
     return (
         <Routes>
             <Route path="/" element={<LandingScreen />} />
             <Route path="/explore" element={<ListingScreen />} />
-            <Route path="/history" element={<HistoryScreen />} />
-            <Route path="/signin" element={<SigninScreen />} />
-            <Route path="/signup" element={<SignupScreen />} />
-            <Route path="/playlists" element={<PlaylistsScreen />} />
-            <Route path="/watchlater" element={<WatchLaterScreen />} />
+            <Route path="/history" element={<PrivateRoute><HistoryScreen /></PrivateRoute>} />
+            {!status && <>
+                <Route path="/signin" element={<SigninScreen />} />
+                <Route path="/signup" element={<SignupScreen />} />
+            </>}
+            <Route path="/playlists" element={<PrivateRoute><PlaylistsScreen /></PrivateRoute>} />
+            <Route path="/watchlater" element={<PrivateRoute><WatchLaterScreen /></PrivateRoute>} />
             <Route path="*" element={< PageNotFoundScreen />} />
         </Routes>
     );
