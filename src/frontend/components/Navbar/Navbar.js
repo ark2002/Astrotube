@@ -38,12 +38,12 @@ function Navbar() {
                 <nav className="navbar__nav flex--row">
                     <ul>
                         <li>
+                            <NavLink to="/explore"><span className="text__small">Explore</span></NavLink>
+                        </li>
+                        <li>
                             <NavLink to="/watchlater">
                                 <span className="material-icons" title="Watch Later">watch_later</span>
                             </NavLink>
-                        </li>
-                        <li>
-                            <NavLink to="/history"><span className="material-icons" title="History">history</span></NavLink>
                         </li>
                         <li>
                             <NavLink to="/playlists"><span className="material-icons" title="Playlists">playlist_play</span></NavLink>
@@ -59,6 +59,7 @@ function Navbar() {
                 <NavLink to="/signin" onClick={() => setListVisibility(!listVisibility)}><li>Sign-In</li></NavLink>
                 <NavLink to="/signup" onClick={() => setListVisibility(!listVisibility)}><li>Sign-Up</li></NavLink>
             </div> : <div className="dropdown-list secondary__font text__small">
+                <NavLink to="/playlists"><li><span>History</span></li></NavLink>
                 <NavLink to="/"><li onClick={() => { signOutHandler(setAuth); setListVisibility(!listVisibility) }}>Log-Out</li></NavLink>
             </div>)}
         </>
