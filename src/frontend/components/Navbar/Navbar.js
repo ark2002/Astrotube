@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { useAuth } from "../../context";
+import { useAuth, useTheme } from "../../context";
 import "./Navbar.css"
 
 
@@ -8,17 +8,28 @@ import "./Navbar.css"
 function Navbar() {
     const [listVisibility, setListVisibility] = useState(false);
     const { auth, setAuth } = useAuth();
+    const { theme, setTheme } = useTheme();
 
     const signOutHandler = (setAuth) => {
         localStorage.removeItem("AUTH_TOKEN");
         localStorage.removeItem("USERNAME");
         setAuth((auth) => ({
             ...auth,
-            status: false,
+            isAuth: false,
             token: null,
             userName: "",
         }));
     };
+
+    const themeHandler = () => {
+        if(theme === "dark"){
+            setTheme("light")
+            localStorage.setItem("THEME", "light");
+        }else{
+            setTheme("dark")
+            localStorage.setItem("THEME", "dark");
+        }
+    }
 
     return (
         <>
@@ -48,6 +59,10 @@ function Navbar() {
                         <li>
                             <NavLink to="/playlists"><span className="material-icons" title="Playlists">playlist_play</span></NavLink>
                         </li>
+                        <li>
+                            {theme==="light" ? <span className="material-icons" title="dark-mode" onClick={themeHandler}>dark_mode</span> :
+                                <span className="material-icons" title="light-mode" onClick={themeHandler}>brightness_high</span>}
+                        </li>
                         <li onClick={() => setListVisibility(!listVisibility)}>
                             <span className="material-icons account-icon" title="Account">account_circle</span>
                             <span className="font__primary text__small">{auth.userName}</span>▼
@@ -55,7 +70,7 @@ function Navbar() {
                     </ul>
                 </nav>
             </header>
-            {listVisibility && (!auth.status ? <div className="dropdown-list secondary__font text__small">
+            {listVisibility && (!auth.isAuth ? <div className="dropdown-list secondary__font text__small">
                 <NavLink to="/signin" onClick={() => setListVisibility(!listVisibility)}><li>Sign-In</li></NavLink>
                 <NavLink to="/signup" onClick={() => setListVisibility(!listVisibility)}><li>Sign-Up</li></NavLink>
             </div> : <div className="dropdown-list secondary__font text__small">

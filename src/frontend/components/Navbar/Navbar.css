@@ -1,12 +1,25 @@
 .dropdown-list {
     width: 10rem;
     background-color: var(--white-color);
+    color: var(--black-color);
     text-align: center;
     position: fixed;
     right: 0;
     z-index: 2;
 }
 
-.navbar__nav li:hover{
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+.search__btn-icon {
+    color:var(--white-color);
+    background-color: var(--secondary--color);
+}
+
+.navbar__nav li:hover {
+    box-shadow: #0000003d 0px 3px 8px;
+}
+
+header,
+header div,
+header input {
+    background-color: var(--white-color);
+    color: var(--black-color);
 }
