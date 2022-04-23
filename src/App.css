@@ -5,3 +5,32 @@
 /* Font Awesome link */
 @import url("https://pro.fontawesome.com/releases/v5.10.0/css/all.css");
 /* Font Awesome link */
+
+
+.light {
+    --white-color: #ffffff;
+    --black-color: #000000;
+    --gray-color: #888888;
+    --primary-color: #3d348b;
+    --secondary-color: #9393ff;
+    --tertiary-color: #f7b801;
+    --hover-color: #f1f1ff;
+    --background-color: #efefef;
+}
+
+.dark {
+    --white-color: #19191b;
+    --black-color: #ffffff;
+    --gray-color: #888888;
+    --primary-color: #2c94cc;
+    --secondary-color: #b8b8ff;
+    --tertiary-color: #BA8AF9;
+    --hover-color: #232346a0;
+    --background-color: #202124;
+}
+
+.App {
+    background-color: var(--background-color);
+    color: var(--black-color);
+    transition: background-color 1s;
+}
