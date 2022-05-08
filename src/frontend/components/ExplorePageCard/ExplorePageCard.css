@@ -57,6 +57,11 @@
 }
 
 .not--liked {
+    color: var(--gray-color);
+    cursor: pointer;
+}
+
+.liked{
     color: var(--primary-color);
     cursor: pointer;
 }

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./ExplorePageCard.css"
 
 const ExplorePageCard = ({ video }) => {
-    const { _id, title, isLiked, creator, creatorImg } = video;
+    const { _id, title,isLiked, creator, creatorImg } = video;
     const [play, setPlay] = useState(false);
     return (
 
@@ -31,7 +31,7 @@ const ExplorePageCard = ({ video }) => {
             </div>
             {play && (
                 <div className="flex--row secondary__font explore-card__options">
-                    <span className="material-icons not--liked">favorite</span>
+                    <span className={isLiked ?"material-icons liked":"material-icons not--liked"}>favorite</span>
                     <span><b>1200</b></span>
                     <button className="btn btn-color--primary btn-font--secondary">
                         watch later
