@@ -1,5 +1,7 @@
 .explore-card {
-    width: fit-content;
+    min-width: 10rem;
+    width: 28%;
+    max-width: 50rem;
     align-items: center;
 }
 
@@ -11,7 +13,8 @@
     align-items: flex-start;
     gap: 0.5rem;
     width: 90%;
-    padding: 0.5rem 1rem;
+    padding: 1rem;
+    text-align: left;
 }
 
 .explore-card>.btn {
@@ -29,14 +32,28 @@
 }
 
 .explore-card:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     align-self: center;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 5px;
 }
 
 .thumbnail {
-    width: 22vw;
+    width: 100%;
+}
+
+.video__title {
+    padding-bottom: 1rem;
+}
+
+.card__creator{
+    align-items: center;
+    gap: 1rem;
+}
+
+.creator__img{
+    width: 3rem;
+    border-radius: 50%;
 }
 
 .not--liked {
