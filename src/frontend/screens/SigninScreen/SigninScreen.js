@@ -27,7 +27,7 @@ function SigninScreen() {
             localStorage.setItem("USERNAME", foundUser.firstName);
             setAuth((auth) => ({
                 ...auth,
-                status: true,
+                isAuth: true,
                 token: encodedToken,
                 userName: foundUser.firstName,
             }));

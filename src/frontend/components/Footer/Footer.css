@@ -2,7 +2,7 @@
     background-color: var(--black-color);
     padding: 2rem 0rem;
     text-align: center;
-    color: white;
+    color: var(--white-color);
     margin-top: 5rem;
 }
 
@@ -25,5 +25,5 @@ hr {
     margin: 2rem;
     border: 0;
     height: 4px;
-    background-image: linear-gradient(to right, #ffffff00, #ffffffbf, #ffffff00);
+    background-image: linear-gradient(to right, var(--black-color), var(--white-color), var(--black-color));
 }

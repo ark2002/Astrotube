@@ -6,13 +6,13 @@ import { useAuth } from "../context";
 
 const Router = () => {
 
-    const { auth: { status } } = useAuth()
+    const { auth: { isAuth } } = useAuth()
     return (
         <Routes>
             <Route path="/" element={<LandingScreen />} />
             <Route path="/explore" element={<ListingScreen />} />
             <Route path="/history" element={<PrivateRoute><HistoryScreen /></PrivateRoute>} />
-            {!status && <>
+            {!isAuth && <>
                 <Route path="/signin" element={<SigninScreen />} />
                 <Route path="/signup" element={<SignupScreen />} />
             </>}

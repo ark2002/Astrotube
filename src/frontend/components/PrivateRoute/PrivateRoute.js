@@ -4,8 +4,8 @@ import { useAuth } from "../../context";
 
 const PrivateRoute = ({ children }) => {
   let location = useLocation()
-  const { auth: { status }, } = useAuth();
-  return status ? children : <Navigate replace to="/signin" state={{ from: location }} />;
+  const { auth: { isAuth }, } = useAuth();
+  return isAuth ? children : <Navigate replace to="/signin" state={{ from: location }} />;
 };
 
 export { PrivateRoute };

@@ -4,7 +4,14 @@
     margin: 10rem auto;
     padding: 2rem 5rem;
     box-shadow: #0000003d 0px 3px 8px;
+    color: var(--black-color);
+    background-color: var(--white-color);
     top: 40%;
+}
+
+.login__form input {
+    color: var(--black-color);
+    background-color: var(--white-color);
 }
 
 .login__header {

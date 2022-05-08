@@ -1,0 +1,45 @@
+.explore-card {
+    width: fit-content;
+    align-items: center;
+}
+
+.explore-card__top {
+    cursor: pointer;
+}
+
+.explore-card__content {
+    align-items: flex-start;
+    gap: 0.5rem;
+    width: 90%;
+    padding: 0.5rem 1rem;
+}
+
+.explore-card>.btn {
+    width: 90%;
+}
+
+.explore-card__options {
+    width: 90%;
+    align-items: center;
+    gap: 1rem;
+}
+
+.explore-card__options>.btn {
+    margin-left: auto;
+}
+
+.explore-card:hover {
+    transform: scale(1.1);
+    align-self: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 5px;
+}
+
+.thumbnail {
+    width: 22vw;
+}
+
+.not--liked {
+    color: var(--primary-color);
+    cursor: pointer;
+}

@@ -12,6 +12,13 @@
     padding: 2rem 5rem;
     box-shadow: #0000003d 0px 3px 8px;
     top: 40%;
+    color: var(--black-color);
+    background-color: var(--white-color);
+}
+
+.signup__form input {
+    color: var(--black-color);
+    background-color: var(--white-color);
 }
 
 .signup__header {

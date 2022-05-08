@@ -28,7 +28,7 @@ function SignupScreen() {
             localStorage.setItem("USERNAME", createdUser.firstName);
             setAuth((auth) => ({
                 ...auth,
-                status: true,
+                isAuth: true,
                 token: localStorage.getItem("AUTH_TOKEN"),
                 userName: createdUser.firstName,
             }));
