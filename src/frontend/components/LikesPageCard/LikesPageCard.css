@@ -1,0 +1,52 @@
+.liked-video__container {
+    background-color: var(--white-color);
+    color: var(--black-color);
+    box-shadow: var(--hover-color) 0px 6px 12px -2px, var(--hover-color) 0px 3px 7px -3px;
+    gap: 3rem;
+    margin: 0 5rem;
+}
+
+.thumbnail__img {
+    width: 40%;
+}
+
+.video__copy {
+    align-items: flex-start;
+    justify-content: space-around;
+    padding: 2rem;
+    gap: 2rem;
+    flex-basis: 50%;
+}
+
+.video__info {
+    height: 7ch;
+    text-overflow: ellipsis;
+    overflow:hidden;
+    white-space:wrap;
+}
+
+.video__copy-btns {
+    align-items: center;
+    gap: 1rem;
+}
+
+.btn-transparent--primary {
+    background-color: transparent;
+    border: none;
+    color: var(--primary-color);
+}
+
+.btn-transparent--primary:hover {
+    background-color: var(--hover-color);
+}
+
+.video__action {
+    align-items: center;
+    justify-content: space-around;
+    flex-basis: 20%;
+}
+
+.video__creator {
+    align-items: center;
+    gap: 1rem;
+}
