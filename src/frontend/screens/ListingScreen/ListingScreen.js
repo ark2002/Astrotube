@@ -18,12 +18,12 @@ const ListingScreen = () => {
             <div className="explore__page-top flex--column">
                 <h1 className="heading3 primary__font page__heading">Explore Page</h1>
                 <div className="category__choices flex--row secondary__font">
-                    <span className={filter === "Fun Astro" ?"choice1__active":"choice1"} title="Fun Astro" onClick={FilterHandeler}>Fun Astro</span>
-                    <span className={filter === "Astro Facts" ?"choice2__active":"choice2"} title="Astro Facts" onClick={FilterHandeler}>Astro Facts</span>
-                    <span className={filter === "Horoscope 2022" ?"choice3__active":"choice3"} title="Horoscope 2022" onClick={FilterHandeler}>Horoscope 2022</span>
+                    <span className={filter === "Fun Astro" ? "choice1__active" : "choice1"} title="Fun Astro" onClick={FilterHandeler}>Fun Astro</span>
+                    <span className={filter === "Astro Facts" ? "choice2__active" : "choice2"} title="Astro Facts" onClick={FilterHandeler}>Astro Facts</span>
+                    <span className={filter === "Horoscope 2022" ? "choice3__active" : "choice3"} title="Horoscope 2022" onClick={FilterHandeler}>Horoscope 2022</span>
                 </div>
             </div>
-            <div className="explore__list">
+            <div className="explore__list flex--row">
                 {filteredVideos.map((video) => <ExplorePageCard video={video} key={video._id} />)}
             </div>
         </>
