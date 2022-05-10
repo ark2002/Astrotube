@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import { HistoryScreen, LandingScreen, ListingScreen, PageNotFoundScreen, PlaylistsScreen, SigninScreen, SignupScreen, WatchLaterScreen } from "../screens";
+import { HistoryScreen, LandingScreen, LikedVideosScreen, ListingScreen, PageNotFoundScreen, PlaylistsScreen, SigninScreen, SignupScreen, WatchLaterScreen } from "../screens";
 import { PrivateRoute } from "../components";
 import { useAuth } from "../context";
 
@@ -18,6 +18,7 @@ const Router = () => {
             </>}
             <Route path="/playlists" element={<PrivateRoute><PlaylistsScreen /></PrivateRoute>} />
             <Route path="/watchlater" element={<PrivateRoute><WatchLaterScreen /></PrivateRoute>} />
+            <Route path="/likedvideos" element={<PrivateRoute><LikedVideosScreen /></PrivateRoute>} />
             <Route path="*" element={< PageNotFoundScreen />} />
         </Routes>
     );
