@@ -10,11 +10,11 @@ const LikesProvider = ({ children }) => {
     const { auth } = useAuth();
 
     useEffect(() => {
-        if (auth.status) {
+        if (auth.isAuth) {
             (async () => {
                 const response = await getLikedVideo(auth.token);
                 if (response !== undefined) {
-                    setLikes(response)
+                    setLikes(response);
                 } else {
                     setLikes([]);
                 }
