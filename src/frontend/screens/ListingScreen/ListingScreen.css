@@ -31,17 +31,17 @@
     color: var(--tertiary-color);
 }
 
-.choice1:hover{
+.choice1:hover,.choice1__active{
     color: var(--white-color);
     background-color: var(--primary-color);
 }
 
-.choice2:hover{
+.choice2:hover,.choice2__active{
     color: var(--white-color);
     background-color: var(--secondary-color);
 }
 
-.choice3:hover{
+.choice3:hover,.choice3__active{
     color: var(--white-color);
     background-color: var(--tertiary-color);
 }
@@ -55,6 +55,6 @@
     flex-wrap: wrap;
     padding: 2rem;
     justify-content: center;
-    gap: 2rem;
+    gap: 3rem;
     color: var(--black-color);
 }
