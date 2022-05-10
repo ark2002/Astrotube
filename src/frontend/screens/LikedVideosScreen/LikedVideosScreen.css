@@ -1,0 +1,16 @@
+.liked-videos__list {
+    align-content: center;
+    flex-wrap: wrap;
+    padding: 2rem;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.liked__page{
+    min-height: 90vh;
+}
+
+.liked__heading{
+    text-align: center;
+    padding: 3rem;
+}
