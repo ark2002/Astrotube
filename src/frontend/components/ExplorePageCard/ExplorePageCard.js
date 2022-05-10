@@ -74,7 +74,7 @@ const ExplorePageCard = ({ video }) => {
                         }}>favorite_border</span>)}
                     {watchLater.find((video) => video._id === _id) ?
                         <button className="btn btn-color--primary btn-font--secondary" onClick={() => navigate("/watchlater")}>go to watch later</button>
-                        : <button className="btn btn-color--primary btn-font--secondary" onClick={() => addToWatchLaterHandler(video)}>add to watch later</button>}
+                        : <button className="btn btn-color--primary btn-font--secondary" onClick={() => { (auth.isAuth) ? addToWatchLaterHandler(video) : navigate("/signin") }}>add to watch later</button>}
                 </div>
             )}
             {play && (
