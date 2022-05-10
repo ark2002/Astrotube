@@ -1,9 +1,35 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useAuth, useLikes } from "../../context";
+import { addLikedVideo, deleteLikedVideo } from "../../services";
 import "./ExplorePageCard.css"
 
 const ExplorePageCard = ({ video }) => {
-    const { _id, title,isLiked, creator, creatorImg } = video;
+    const { _id, title, creator, creatorImg } = video;
+    const { auth } = useAuth();
+    const { likes, setLikes } = useLikes();
     const [play, setPlay] = useState(false);
+
+    const navigate = useNavigate();
+
+    const addLikeVideoHandler = async (video) => {
+        const response = await addLikedVideo(auth.token, video);
+        if (response !== undefined) {
+            setLikes(response);
+        } else {
+            setLikes([]);
+        }
+    }
+
+    const unLikeHandler = async (id) => {
+        const response = await deleteLikedVideo(auth.token, id);
+        if (response !== undefined) {
+            setLikes(response);
+        } else {
+            setLikes([]);
+        }
+    }
+
     return (
 
         <div
@@ -31,8 +57,11 @@ const ExplorePageCard = ({ video }) => {
             </div>
             {play && (
                 <div className="flex--row secondary__font explore-card__options">
-                    <span className={isLiked ?"material-icons liked":"material-icons not--liked"}>favorite</span>
-                    <span><b>1200</b></span>
+                    {likes.find((video) => video._id === _id) ?
+                        (<span className="material-icons liked" title="unLike" onClick={() => unLikeHandler(_id)}>favorite</span>) :
+                        (<span className="material-icons not--liked" title="Like" onClick={() => {
+                            (auth.isAuth) ? addLikeVideoHandler(video) : navigate("/signin");
+                        }}>favorite_border</span>)}
                     <button className="btn btn-color--primary btn-font--secondary">
                         watch later
                     </button>
@@ -45,6 +74,7 @@ const ExplorePageCard = ({ video }) => {
             )}
         </div>
     );
+
 }
 
 export { ExplorePageCard };

@@ -22,10 +22,10 @@ function Navbar() {
     };
 
     const themeHandler = () => {
-        if(theme === "dark"){
+        if (theme === "dark") {
             setTheme("light")
             localStorage.setItem("THEME", "light");
-        }else{
+        } else {
             setTheme("dark")
             localStorage.setItem("THEME", "dark");
         }
@@ -60,7 +60,10 @@ function Navbar() {
                             <NavLink to="/playlists"><span className="material-icons" title="Playlists">playlist_play</span></NavLink>
                         </li>
                         <li>
-                            {theme==="light" ? <span className="material-icons" title="dark-mode" onClick={themeHandler}>dark_mode</span> :
+                            <NavLink to="/likedvideos"><span className="material-icons nav-likes" title="Liked Videos">favorite_border</span></NavLink>
+                        </li>
+                        <li>
+                            {theme === "light" ? <span className="material-icons" title="dark-mode" onClick={themeHandler}>dark_mode</span> :
                                 <span className="material-icons" title="light-mode" onClick={themeHandler}>brightness_high</span>}
                         </li>
                         <li onClick={() => setListVisibility(!listVisibility)}>
