@@ -1,18 +1,19 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useAuth, useLikes } from "../../context";
-import { addLikedVideo, deleteLikedVideo } from "../../services";
+import { useAuth, useLikes, useWatchLater } from "../../context";
+import { addLikedVideo, addToWatchLater, deleteLikedVideo } from "../../services";
 import "./ExplorePageCard.css"
 
 const ExplorePageCard = ({ video }) => {
     const { _id, title, creator, creatorImg } = video;
     const { auth } = useAuth();
     const { likes, setLikes } = useLikes();
+    const { watchLater, setWatchLater } = useWatchLater();
     const [play, setPlay] = useState(false);
 
     const navigate = useNavigate();
 
-    const addLikeVideoHandler = async (video) => {
+    const likeHandler = async (video) => {
         const response = await addLikedVideo(auth.token, video);
         if (response !== undefined) {
             setLikes(response);
@@ -27,6 +28,15 @@ const ExplorePageCard = ({ video }) => {
             setLikes(response);
         } else {
             setLikes([]);
+        }
+    }
+
+    const addToWatchLaterHandler = async (video) => {
+        const response = await addToWatchLater(auth.token, video);
+        if (response !== undefined) {
+            setWatchLater(response);
+        } else {
+            setWatchLater([]);
         }
     }
 
@@ -60,11 +70,11 @@ const ExplorePageCard = ({ video }) => {
                     {likes.find((video) => video._id === _id) ?
                         (<span className="material-icons liked" title="unLike" onClick={() => unLikeHandler(_id)}>favorite</span>) :
                         (<span className="material-icons not--liked" title="Like" onClick={() => {
-                            (auth.isAuth) ? addLikeVideoHandler(video) : navigate("/signin");
+                            (auth.isAuth) ? likeHandler(video) : navigate("/signin");
                         }}>favorite_border</span>)}
-                    <button className="btn btn-color--primary btn-font--secondary">
-                        watch later
-                    </button>
+                    {watchLater.find((video) => video._id === _id) ?
+                        <button className="btn btn-color--primary btn-font--secondary" onClick={() => navigate("/watchlater")}>go to watch later</button>
+                        : <button className="btn btn-color--primary btn-font--secondary" onClick={() => addToWatchLaterHandler(video)}>add to watch later</button>}
                 </div>
             )}
             {play && (
