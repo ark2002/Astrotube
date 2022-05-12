@@ -1,0 +1,17 @@
+.history-video__container {
+    background-color: var(--white-color);
+    color: var(--black-color);
+    box-shadow: var(--hover-color) 0px 6px 12px -2px, var(--hover-color) 0px 3px 7px -3px;
+    gap: 3vw;
+    width: 90vw;
+}
+
+.material-icons.delete__btn {
+    font-size: 4rem;
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+.video__copytop {
+    gap: 2rem;
+}
