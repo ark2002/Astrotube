@@ -1,0 +1,16 @@
+.watchlater-videos__list {
+    align-content: center;
+    flex-wrap: wrap;
+    padding: 2rem;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.watchlater__page {
+    min-height: 90vh;
+}
+
+.watchlater__heading {
+    text-align: center;
+    padding: 3rem;
+}

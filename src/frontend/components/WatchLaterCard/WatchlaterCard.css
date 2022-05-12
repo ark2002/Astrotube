@@ -1,13 +1,13 @@
-.liked-video__container {
+.watchlater-video__container {
     background-color: var(--white-color);
     color: var(--black-color);
     box-shadow: var(--hover-color) 0px 6px 12px -2px, var(--hover-color) 0px 3px 7px -3px;
-    gap: 3vw;
-    width: 90vw;
+    gap: 3rem;
+    margin: 0 5rem;
 }
 
 .thumbnail__img {
-    width: 35%;
+    width: 40%;
 }
 
 .video__copy {
@@ -52,7 +52,7 @@
 }
 
 @media screen and (max-width: 660px) {
-    .liked-video__container {
+    .watchlater-video__container {
         font-size: 50%;
         gap: 0;
     }
