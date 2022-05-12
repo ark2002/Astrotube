@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
-import { useAuth, useLikes, useWatchLater } from "../../context";
-import { addToWatchLater, deleteLikedVideo } from "../../services";
+import { useAuth, useHistory, useLikes, useWatchLater } from "../../context";
+import { addToHistory, addToWatchLater, deleteLikedVideo, deleteOneFromHistory } from "../../services";
 import "./LikesPageCard.css";
 
 const LikesPageCard = ({ video }) => {
@@ -8,6 +8,7 @@ const LikesPageCard = ({ video }) => {
     const { _id, title, description, creator, creatorImg } = video
     const { auth } = useAuth();
     const { setLikes } = useLikes();
+    const { history, setHistory } = useHistory();
     const { watchLater, setWatchLater } = useWatchLater();
     const navigate = useNavigate();
 
@@ -29,9 +30,36 @@ const LikesPageCard = ({ video }) => {
         }
     }
 
+    const addToHistoryHandler = async (video) => {
+        const response = await addToHistory(auth.token, video);
+        if (response !== undefined) {
+            setHistory(response);
+        } else {
+            setHistory([])
+        }
+    }
+
+    const deleteOneFromHistoryHandler = async (id) => {
+        const response = await deleteOneFromHistory(auth.token, id);
+        if (response !== undefined) {
+            setHistory(response);
+        } else {
+            setHistory([]);
+        }
+    }
+
+    const videoClickHandler = (video) => {
+        if (history.some((item) => item._id === video._id)) {
+            deleteOneFromHistoryHandler(video._id).then(addToHistoryHandler(video));
+        } else {
+            addToHistoryHandler(video);
+        }
+        navigate(`/video/${video._id}`);
+    }
+
     return (
         <div className="liked-video__container flex--row">
-            <img src={`http://img.youtube.com/vi/${_id}/maxresdefault.jpg`} alt="thubmnail" className="thumbnail__img" />
+            <img src={`http://img.youtube.com/vi/${_id}/maxresdefault.jpg`} alt="thubmnail" className="thumbnail__img" onClick={() => videoClickHandler(video)} />
             <div className="video__copy flex--column">
                 <h2 className="video__name secondary__font">{title}</h2>
                 <p className="video__info secondary__font text__small">{description}</p>
@@ -48,7 +76,7 @@ const LikesPageCard = ({ video }) => {
                     <h3 className="video-creator__name secondary__font">{creator}</h3>
                 </div>
                 <div>
-                    <span className="material-icons liked" title="Unlike" onClick={() => unLikeHandler(_id)}>favorite</span>
+                    <span className="material-icons liked" title="Unlike" onClick={() => unLikeHandler(_id)}>thumb_up</span>
                 </div>
             </div>
         </div>

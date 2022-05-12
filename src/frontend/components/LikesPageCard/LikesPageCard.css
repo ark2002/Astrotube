@@ -8,6 +8,7 @@
 
 .thumbnail__img {
     width: 35%;
+    cursor: pointer;
 }
 
 .video__copy {

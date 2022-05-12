@@ -3,4 +3,7 @@ export { Footer } from "./Footer/Footer"
 export { PrivateRoute } from "./PrivateRoute/PrivateRoute"
 export { ExplorePageCard } from "./ExplorePageCard/ExplorePageCard"
 export { LikesPageCard } from "./LikesPageCard/LikesPageCard"
-export { WatchLaterCard } from "./WatchLaterCard/WatchLaterCard";
+export { WatchLaterCard } from "./WatchLaterCard/WatchLaterCard"
+export { VideoPlayer } from "./VideoPlayer/VideoPlayer"
+export { RecommendationCard } from "./RecommendationCard/RecommendationCard"
+export { HistoryPageCard } from "./HistoryPageCard/HistoryPageCard"
