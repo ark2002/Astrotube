@@ -5,7 +5,7 @@ import "./RecommendationCard.css"
 
 const RecommendationCard = ({ video }) => {
     const navigate = useNavigate();
-    const { _id, title, creator } = video;
+    const { _id, title, creator,views } = video;
     const { auth } = useAuth();
     const { history, setHistory } = useHistory();
 
@@ -46,7 +46,7 @@ const RecommendationCard = ({ video }) => {
             <div className="recommendation__copy flex--column secondary__font">
                 <h3 className="recommendation__title">{title}</h3>
                 <p className="recommendation__creator">{creator}</p>
-                <p className="recommendation__views">172,345 views</p>
+                <p className="recommendation__views">{views}</p>
             </div>
         </div >
     );

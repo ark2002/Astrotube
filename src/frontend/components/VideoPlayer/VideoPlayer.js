@@ -6,7 +6,7 @@ import "./VideoPlayer.css";
 
 const VideoPlayer = ({ video }) => {
 
-    const { _id, title, description, creatorImg, creator } = video;
+    const { _id, title, description, creatorImg, creator, views, subCount } = video;
     const { auth } = useAuth();
     const { likes, setLikes } = useLikes();
     const { watchLater, setWatchLater } = useWatchLater();
@@ -48,8 +48,8 @@ const VideoPlayer = ({ video }) => {
                 className="video__player"
             />
             <h1 className='heading3 primary__font video__title'>{title}</h1>
-            <div className="video__options flex--row">
-                <h1>273,276 views</h1>
+            <div className="video__options flex--row secondary__font">
+                <h1>{views}</h1>
                 <div className="video__btns flex--row">
                     {likes.find((video) => video._id === _id) ?
                         (<span className="material-icons liked" title="unLike" onClick={() => unLikeHandler(_id)}>thumb_up</span>) :
@@ -72,7 +72,7 @@ const VideoPlayer = ({ video }) => {
                     />
                     <div className="creator__details flex--column">
                         <h2 className="secondary__font">{creator}</h2>
-                        <h4 className="secondary__font">27.5K Subscribers</h4>
+                        <h4 className="secondary__font">{subCount}</h4>
                     </div>
                 </div>
                 <button className="btn btn-font--secondary btn__subscribe">Subscribe</button>
