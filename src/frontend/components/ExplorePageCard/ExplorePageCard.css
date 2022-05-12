@@ -7,6 +7,17 @@
 
 .explore-card__top {
     cursor: pointer;
+    position: relative;
+}
+
+.video__views{
+    position: absolute;
+    right:0;
+    top:17rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding: 0.5rem;
+    background-color: var(--hover-color);
 }
 
 .explore-card__content {
@@ -46,12 +57,12 @@
     padding-bottom: 1rem;
 }
 
-.card__creator{
+.card__creator {
     align-items: center;
     gap: 1rem;
 }
 
-.creator__img{
+.creator__img {
     width: 3rem;
     border-radius: 50%;
 }
@@ -61,7 +72,7 @@
     cursor: pointer;
 }
 
-.liked{
+.liked {
     color: var(--primary-color);
     cursor: pointer;
 }

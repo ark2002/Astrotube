@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useAuth, useLikes, useWatchLater } from "../../context";
-import { addLikedVideo, addToWatchLater, deleteLikedVideo } from "../../services";
+import { useAuth, useHistory, useLikes, useWatchLater } from "../../context";
+import { addLikedVideo, addToHistory, addToWatchLater, deleteLikedVideo, deleteOneFromHistory } from "../../services";
 import "./ExplorePageCard.css"
 
 const ExplorePageCard = ({ video }) => {
-    const { _id, title, creator, creatorImg } = video;
+    const { _id, title, creator, creatorImg,views } = video;
     const { auth } = useAuth();
     const { likes, setLikes } = useLikes();
     const { watchLater, setWatchLater } = useWatchLater();
+    const { history, setHistory } = useHistory();
     const [play, setPlay] = useState(false);
 
     const navigate = useNavigate();
@@ -40,12 +41,40 @@ const ExplorePageCard = ({ video }) => {
         }
     }
 
+    const addToHistoryHandler = async (video) => {
+        const response = await addToHistory(auth.token, video);
+        if (response !== undefined) {
+            setHistory(response);
+        } else {
+            setHistory([])
+        }
+    }
+
+    const deleteOneFromHistoryHandler = async (id) => {
+        const response = await deleteOneFromHistory(auth.token, id);
+        if (response !== undefined) {
+            setHistory(response);
+        } else {
+            setHistory([]);
+        }
+    }
+
+    const videoClickHandler = (video) => {
+        if (history.some((item) => item._id === video._id)) {
+            deleteOneFromHistoryHandler(video._id).then(addToHistoryHandler(video));
+        } else {
+            addToHistoryHandler(video);
+        }
+        navigate(`/video/${video._id}`);
+    }
+
     return (
 
         <div
             className="explore-card flex--column secondary__font"
             onMouseEnter={() => setPlay(true)}
             onMouseLeave={() => setPlay(false)}
+            onClick={() => videoClickHandler(video)}
         >
             <div className="explore-card__top">
                 <img
@@ -53,6 +82,7 @@ const ExplorePageCard = ({ video }) => {
                     className="thumbnail"
                     alt="Thumbnail"
                 />
+                <p className="video__views">{views}</p>
                 <div className="flex--column explore-card__content">
                     <h2 className="video__title">{title}</h2>
                     <div className="flex--row card__creator">
@@ -65,24 +95,28 @@ const ExplorePageCard = ({ video }) => {
                     </div>
                 </div>
             </div>
-            {play && (
-                <div className="flex--row secondary__font explore-card__options">
-                    {likes.find((video) => video._id === _id) ?
-                        (<span className="material-icons liked" title="unLike" onClick={() => unLikeHandler(_id)}>favorite</span>) :
-                        (<span className="material-icons not--liked" title="Like" onClick={() => {
-                            (auth.isAuth) ? likeHandler(video) : navigate("/signin");
-                        }}>favorite_border</span>)}
-                    {watchLater.find((video) => video._id === _id) ?
-                        <button className="btn btn-color--primary btn-font--secondary" onClick={() => navigate("/watchlater")}>go to watch later</button>
-                        : <button className="btn btn-color--primary btn-font--secondary" onClick={() => { (auth.isAuth) ? addToWatchLaterHandler(video) : navigate("/signin") }}>add to watch later</button>}
-                </div>
-            )}
-            {play && (
-                <button className="btn btn-color--primary btn-font--secondary">
-                    Add to Playlist
-                </button>
-            )}
-        </div>
+            {
+                play && (
+                    <div className="flex--row secondary__font explore-card__options" onClick={(e) => e.stopPropagation()}>
+                        {likes.find((video) => video._id === _id) ?
+                            (<span className="material-icons liked" title="unLike" onClick={() => unLikeHandler(_id)}>thumb_up</span>) :
+                            (<span className="material-icons not--liked" title="Like" onClick={() => {
+                                (auth.isAuth) ? likeHandler(video) : navigate("/signin");
+                            }}>thumb_up</span>)}
+                        {watchLater.find((video) => video._id === _id) ?
+                            <button className="btn btn-color--primary btn-font--secondary" onClick={() => navigate("/watchlater")}>go to watch later</button>
+                            : <button className="btn btn-color--primary btn-font--secondary" onClick={() => { (auth.isAuth) ? addToWatchLaterHandler(video) : navigate("/signin") }}>add to watch later</button>}
+                    </div>
+                )
+            }
+            {
+                play && (
+                    <button className="btn btn-color--primary btn-font--secondary" onClick={(e) => e.stopPropagation()}>
+                        Add to Playlist
+                    </button>
+                )
+            }
+        </div >
     );
 
 }
