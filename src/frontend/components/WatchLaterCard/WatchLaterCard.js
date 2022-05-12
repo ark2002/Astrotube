@@ -1,5 +1,6 @@
-import { useAuth, useLikes, useWatchLater } from "../../context";
-import { addLikedVideo, deleteFromWatchLater, deleteLikedVideo } from "../../services";
+import { useNavigate } from "react-router-dom";
+import { useAuth, useHistory, useLikes, useWatchLater } from "../../context";
+import { addLikedVideo, addToHistory, deleteFromWatchLater, deleteLikedVideo, deleteOneFromHistory } from "../../services";
 import "./WatchlaterCard.css";
 
 const WatchLaterCard = ({ video }) => {
@@ -8,6 +9,8 @@ const WatchLaterCard = ({ video }) => {
     const { auth } = useAuth();
     const { setWatchLater } = useWatchLater();
     const { likes, setLikes } = useLikes();
+    const { history, setHistory } = useHistory();
+    const navigate = useNavigate();
 
     const deleteFromWatchLaterHandler = async (id) => {
         const response = await deleteFromWatchLater(auth.token, id);
@@ -36,9 +39,36 @@ const WatchLaterCard = ({ video }) => {
         }
     }
 
+    const addToHistoryHandler = async (video) => {
+        const response = await addToHistory(auth.token, video);
+        if (response !== undefined) {
+            setHistory(response);
+        } else {
+            setHistory([])
+        }
+    }
+
+    const deleteOneFromHistoryHandler = async (id) => {
+        const response = await deleteOneFromHistory(auth.token, id);
+        if (response !== undefined) {
+            setHistory(response);
+        } else {
+            setHistory([]);
+        }
+    }
+
+    const videoClickHandler = (video) => {
+        if (history.some((item) => item._id === video._id)) {
+            deleteOneFromHistoryHandler(video._id).then(addToHistoryHandler(video));
+        } else {
+            addToHistoryHandler(video);
+        }
+        navigate(`/video/${video._id}`);
+    }
+
     return (
         <div className="watchlater-video__container flex--row">
-            <img src={`http://img.youtube.com/vi/${_id}/maxresdefault.jpg`} alt="thubmnail" className="thumbnail__img" />
+            <img src={`http://img.youtube.com/vi/${_id}/maxresdefault.jpg`} alt="thubmnail" className="thumbnail__img" onClick={() => videoClickHandler(video)} />
             <div className="video__copy flex--column">
                 <h2 className="video__name secondary__font">{title}</h2>
                 <p className="video__info secondary__font text__small">{description}</p>
@@ -54,8 +84,8 @@ const WatchLaterCard = ({ video }) => {
                 </div>
                 <div >
                     {likes.find((video) => video._id === _id) ?
-                        (<span className="material-icons liked" title="unLike" onClick={() => unLikeHandler(_id)}>favorite</span>) :
-                        (<span className="material-icons not--liked" title="Like" onClick={() => { likeHandler(video); }}>favorite_border</span>)}
+                        (<span className="material-icons liked" title="unLike" onClick={() => unLikeHandler(_id)}>thumb_up</span>) :
+                        (<span className="material-icons not--liked" title="Like" onClick={() => { likeHandler(video); }}>thumb_up</span>)}
                 </div>
             </div>
         </div>
