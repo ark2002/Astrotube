@@ -1,0 +1,14 @@
+.video-screen__container {
+    justify-content: space-around;
+    padding: 5rem 0;
+}
+
+.video__main {
+    width: 62rem
+}
+
+.video__recommendations {
+    width: 35%;
+    align-items: center;
+    gap: 2rem;
+}
