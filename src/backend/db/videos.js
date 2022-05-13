@@ -9,7 +9,9 @@ export const videos = [
     title: "What's the Most Risky Zodiac Sign?",
     description:
       "Hey there! Wanna know how dangerous are you according to your sign? Yup, zodiac signs are fun and interesting, but they aren't all about our best qualities.",
+    views: "4,777,924 views",
     creator: "BRIGHT SIDE",
+    subCount: "43.4M subscribers",
     creatorImg: "https://yt3.ggpht.com/QnTNTL6lvpKA-OWYdSwke3kF9GEBoriwaaHlbOOo4E7hRuXBEiO1mrYsvmk8xQznjg3GKWUT=s176-c-k-c0x00ffffff-no-rj",
     category: "Fun Astro",
   },
@@ -18,7 +20,9 @@ export const videos = [
     title: "Interesting Facts About ARIES Zodiac Sign",
     description:
       "Energetic, enthusiastic, curious, spontaneous, direct, frank, independent, and confident.Aries is one of the most dynamic and stimulating signs in the zodiac, and having one in your life is always good fun. While with Arians you get precisely what you see, it's still a good idea to learn more from this strong-willed sign. ",
+    views: "949,054 views",
     creator: "Zodiac Talks",
+    subCount: "141K subscribers",
     creatorImg: "https://yt3.ggpht.com/ytc/AKedOLRPxRDyC_QlW1JvEbSXOM_ZxfDkx_-hTcyWiH4L-pg=s88-c-k-c0x00ffffff-no-rj",
     category: "Astro Facts",
   },
@@ -27,7 +31,9 @@ export const videos = [
     title: "Capricorn 2022-2023 Annual Horoscope Forecast - A Brand New You!",
     description:
       "Welcome Capricorns to your 2022 astrology horoscope forecast! ✨",
+    views: "82,213 views",
     creator: "Bracha Goldsmith",
+    subCount: "414K subscribers",
     creatorImg: "https://yt3.ggpht.com/ytc/AKedOLSOh6_8tn6i4fKS_hzpAfjRh6_yRlyKleQKxAbEvA=s88-c-k-c0x00ffffff-no-rj",
     category: "Horoscope 2022",
   },
@@ -36,7 +42,9 @@ export const videos = [
     title: "Which Zodiac Signs Make the Best First Impression",
     description:
       "Have you ever met someone and thought: “Wow, what a buffoon!”? I know I have, and then he became my best friend. First impressions are usually wrong; sometimes we think we’ll vibe with someone and when we get to know them; we RUN. ",
+    views: "1,225,458 views",
     creator: "BRIGHT SIDE",
+    subCount: "43.4M subscribers",
     creatorImg: "https://yt3.ggpht.com/QnTNTL6lvpKA-OWYdSwke3kF9GEBoriwaaHlbOOo4E7hRuXBEiO1mrYsvmk8xQznjg3GKWUT=s88-c-k-c0x00ffffff-no-rj",
     category: "Fun Astro",
   },
@@ -45,7 +53,9 @@ export const videos = [
     title: "Interesting Facts About AQUARIUS Zodiac Sign",
     description:
       "Known for their curiosity, truthfulness, intelligence, and unpredictability, Aquarians are quite the character, and they can be some of the most interesting signs you'll know. ",
+    views: "128,232 views",
     creator: "Zodiac Talks",
+    subCount: "141K subscribers",
     creatorImg: "https://yt3.ggpht.com/ytc/AKedOLRPxRDyC_QlW1JvEbSXOM_ZxfDkx_-hTcyWiH4L-pg=s88-c-k-c0x00ffffff-no-rj",
     category: "Astro Facts",
   },
@@ -54,7 +64,9 @@ export const videos = [
     title: "Sagittarius 2022-2023 Annual Horoscope Forecast - Finding your Supernatural Powers!",
     description:
       "Welcome Sagittarians to your 2022 astrology horoscope forecast! ✨",
+    views: "483,245 views",
     creator: "Bracha Goldsmith",
+    subCount: "414K subscribers",
     creatorImg: "https://yt3.ggpht.com/ytc/AKedOLSOh6_8tn6i4fKS_hzpAfjRh6_yRlyKleQKxAbEvA=s88-c-k-c0x00ffffff-no-rj",
     category: "Horoscope 2022",
   },
@@ -63,7 +75,9 @@ export const videos = [
     title: "What’s Your Zodiac Personality?",
     description:
       "Which Zodiac sign were you born into? Are you sure it really matches your personality?  Whether you are a trueborn Aries, Capricorn or Sagittarius, our new striking quiz from 1 Million Tests is going to find your true zodiac personality. Are you ready?",
+    views: "162,097 views",
     creator: "What's It For?",
+    subCount: "765K subscribers",
     creatorImg: "https://yt3.ggpht.com/V4kV7fdcFykVMebmk6O9B19h2Ce6miuWewe8auWZA5ZZs6j_UKEtKzJ8MP8sG12wef6a1Cj7JkY=s88-c-k-c0x00ffffff-no-rj",
     category: "Fun Astro",
   },
@@ -72,7 +86,9 @@ export const videos = [
     title: "Interesting Facts About CANCER Zodiac Sign",
     description:
       "Loyal, moody, creative, and insecure. Cancers are a walking contradiction, and we wouldn't want it any other way. ",
+    views: "542,874 views",
     creator: "Zodiac Talks",
+    subCount: "141K subscribers",
     creatorImg: "https://yt3.ggpht.com/ytc/AKedOLRPxRDyC_QlW1JvEbSXOM_ZxfDkx_-hTcyWiH4L-pg=s88-c-k-c0x00ffffff-no-rj",
     category: "Astro Facts",
   },
@@ -81,7 +97,9 @@ export const videos = [
     title: "Taurus 2022-2023 Annual Horoscope Forecast - Amazing New Opportunities!",
     description:
       "Welcome Taureans to your 2022 astrology horoscope forecast! ✨",
+    views: "981,702 views",
     creator: "Bracha Goldsmith",
+    subCount: "414K subscribers",
     creatorImg: "https://yt3.ggpht.com/ytc/AKedOLSOh6_8tn6i4fKS_hzpAfjRh6_yRlyKleQKxAbEvA=s88-c-k-c0x00ffffff-no-rj",
     category: "Horoscope 2022",
   },
@@ -90,7 +108,9 @@ export const videos = [
     title: "Which Disney Villain Are You Based on Your Sign?",
     description:
       "Which Disney villain are you based on your sign? For this list, we’re exploring the Disney Villain equivalent to each Zodiac sign. Our countdown includes Captain Hook, Mother Gothel, Scar, and more! ",
+    views: "1,234,214 views",
     creator: "MsMojo",
+    subCount: "4.56M subscribers",
     creatorImg: "https://yt3.ggpht.com/ytc/AKedOLTJ2h_arOtvqvKAFfjlhkDBX2qja1GqWsrJRhs8Yg=s88-c-k-c0x00ffffff-no-rj",
     category: "Fun Astro",
   },
@@ -99,7 +119,9 @@ export const videos = [
     title: "Interesting Facts About CAPRICORN Zodiac Sign",
     description:
       "Responsible, disciplined, reserved. It's easy to assume Capricorns are one of the most boring and predictable signs in the Zodiac, but that's not always the case. ",
+    views: "222,873 views",
     creator: "Zodiac Talks",
+    subCount: "141K subscribers",
     creatorImg: "https://yt3.ggpht.com/ytc/AKedOLRPxRDyC_QlW1JvEbSXOM_ZxfDkx_-hTcyWiH4L-pg=s88-c-k-c0x00ffffff-no-rj",
     category: "Astro Facts",
   },
@@ -108,7 +130,9 @@ export const videos = [
     title: "Cancer 2022-2023 Annual Horoscope Forecast - Magical Year for You!",
     description:
       "Welcome Cancerians to your 2022 astrology horoscope forecast! ✨      ",
+    views: "199,254 views",
     creator: "Bracha Goldsmith",
+    subCount: "414K subscribers",
     creatorImg: "https://yt3.ggpht.com/ytc/AKedOLSOh6_8tn6i4fKS_hzpAfjRh6_yRlyKleQKxAbEvA=s88-c-k-c0x00ffffff-no-rj",
     category: "Horoscope 2022",
   },
@@ -117,7 +141,9 @@ export const videos = [
     title: "Your Worst Enemy By Zodiac Sign",
     description:
       "Today, we’re going to be your link to the stars. Who can you really trust? Who should you stay away from and the other zodiac signs who, try as you might, will never be your true friends.",
+    views: "189,959 views",
     creator: "Bestie",
+    subCount: "4.19M subscribers",
     creatorImg: "https://yt3.ggpht.com/ytc/AKedOLT-KIjovaVYyCMkt2u-Y6kCqGLGscejJPDbFu8gAg=s88-c-k-c0x00ffffff-no-rj",
     category: "Fun Astro",
   },
@@ -126,7 +152,9 @@ export const videos = [
     title: "Interesting Facts About LEO Zodiac Sign",
     description:
       "Strong-willed, determined, charming, and ruthless. Like the lion that embodies them, Leos love to lead and garner attention, and they're awfully good at that.",
+    views: "276,965 views",
     creator: "Zodiac Talks",
+    subCount: "141K subscribers",
     creatorImg: "https://yt3.ggpht.com/ytc/AKedOLRPxRDyC_QlW1JvEbSXOM_ZxfDkx_-hTcyWiH4L-pg=s88-c-k-c0x00ffffff-no-rj",
     category: "Astro Facts",
   },
@@ -135,7 +163,9 @@ export const videos = [
     title: "Libra 2022-2023 Annual Horoscope Forecast - Exceptional Opportunities Coming!",
     description:
       "Welcome Librans to your 2022 astrology horoscope forecast! ✨",
+    views: "154,772 views",
     creator: "Bracha Goldsmith",
+    subCount: "414K subscribers",
     creatorImg: "https://yt3.ggpht.com/ytc/AKedOLSOh6_8tn6i4fKS_hzpAfjRh6_yRlyKleQKxAbEvA=s88-c-k-c0x00ffffff-no-rj",
     category: "Horoscope 2022",
   },
@@ -144,7 +174,9 @@ export const videos = [
     title: "Amazing Fun Facts About Zodiac Signs",
     description:
       "Here we have listed some of the interesting secret facts about each zodiac sign that you will be amazed to know. Quick fun facts about each zodiac sign you will love to know.",
+    views: "863,645 views",
     creator: "Zodiac Story",
+    subCount: "102K subscribers",
     creatorImg: "https://yt3.ggpht.com/ytc/AKedOLSJpeWejfcfH4-IA0was4FO38kvSa_RI7nKiv5c=s88-c-k-c0x00ffffff-no-rj",
     category: "Fun Astro",
   },
@@ -153,7 +185,9 @@ export const videos = [
     title: "Interesting Facts About LIBRA Zodiac Sign",
     description:
       "Independent, intelligent, tolerant, and magnetic; Libras are as irresistible as they're loving, and that makes people want to know more about them.",
+    views: "882,818 views",
     creator: "Zodiac Talks",
+    subCount: "141K subscribers",
     creatorImg: "https://yt3.ggpht.com/ytc/AKedOLRPxRDyC_QlW1JvEbSXOM_ZxfDkx_-hTcyWiH4L-pg=s88-c-k-c0x00ffffff-no-rj",
     category: "Astro Facts",
   },
@@ -162,7 +196,9 @@ export const videos = [
     title: "Aries 2022-2023 Annual Horoscope Forecast - Your BEST year ever!",
     description:
       "Welcome Aries to your 2022 astrology horoscope forecast! ✨",
+    views: "124,254 views",
     creator: "Bracha Goldsmith",
+    subCount: "414K subscribers",
     creatorImg: "https://yt3.ggpht.com/ytc/AKedOLSOh6_8tn6i4fKS_hzpAfjRh6_yRlyKleQKxAbEvA=s88-c-k-c0x00ffffff-no-rj",
     category: "Horoscope 2022",
   },
@@ -171,7 +207,9 @@ export const videos = [
     title: "Most Dangerous Zodiac Sign",
     description:
       "Nobody is perfect we all have some flaws. Everyone has a different way of revealing their anger, which might turn out to be quite dangerous and terrifying sometimes. Some of the people may incline to commit crimes like murder, robbery kidnapping, etc.",
+    views: "642,853 views",
     creator: "Zodiac Story",
+    subCount: "102K subscribers",
     creatorImg: "https://yt3.ggpht.com/ytc/AKedOLSJpeWejfcfH4-IA0was4FO38kvSa_RI7nKiv5c=s88-c-k-c0x00ffffff-no-rj",
     category: "Fun Astro",
   },
@@ -180,7 +218,9 @@ export const videos = [
     title: "Interesting Facts About PISCES Zodiac Sign",
     description:
       "Sensitive, creative, gentle, and nurturing, Pisces are one of the most easy-going signs of the Zodiac, as well as one of the most loyal. ",
+    views: "975,453 views",
     creator: "Zodiac Talks",
+    subCount: "141K subscribers",
     creatorImg: "https://yt3.ggpht.com/ytc/AKedOLRPxRDyC_QlW1JvEbSXOM_ZxfDkx_-hTcyWiH4L-pg=s88-c-k-c0x00ffffff-no-rj",
     category: "Astro Facts",
   },
@@ -189,7 +229,9 @@ export const videos = [
     title: "Aquarius 2022-2023 Annual Horoscope Forecast - You're Going Higher and Higher!",
     description:
       "Welcome Aquarians to your 2022 astrology horoscope forecast! ✨",
+    views: "132,643 views",
     creator: "Bracha Goldsmith",
+    subCount: "414K subscribers",
     creatorImg: "https://yt3.ggpht.com/ytc/AKedOLSOh6_8tn6i4fKS_hzpAfjRh6_yRlyKleQKxAbEvA=s88-c-k-c0x00ffffff-no-rj",
     category: "Horoscope 2022",
   },
@@ -198,7 +240,9 @@ export const videos = [
     title: "Bad Habits Of The Zodiac Signs",
     description:
       "Bad habits of the zodiac signs. You're in luck, the cosmos is whispering onto us it's secrets once again. Come, listen and look, dear viewer, for today we're going to hearken to the whispers of the universe and have it tell us..",
+    views: "452,657 views",
     creator: "Bestie",
+    subCount: "4.19M subscribers",
     creatorImg: "https://yt3.ggpht.com/ytc/AKedOLT-KIjovaVYyCMkt2u-Y6kCqGLGscejJPDbFu8gAg=s88-c-k-c0x00ffffff-no-rj",
     category: "Fun Astro",
   },
@@ -207,7 +251,9 @@ export const videos = [
     title: "Interesting Facts About SCORPIO Zodiac Sign",
     description:
       "Mysterious, strong-willed, resentful, and ambitious. Much has been said about the eight astrological sign, and there's no doubt you've heard rumors. ",
+    views: "184,327 views",
     creator: "Zodiac Talks",
+    subCount: "141K subscribers",
     creatorImg: "https://yt3.ggpht.com/ytc/AKedOLRPxRDyC_QlW1JvEbSXOM_ZxfDkx_-hTcyWiH4L-pg=s88-c-k-c0x00ffffff-no-rj",
     category: "Astro Facts",
   },
@@ -216,7 +262,9 @@ export const videos = [
     title: "Leo 2022-2023 Annual Horoscope Forecast - Exciting Adventures Ahead!",
     description:
       "Welcome Leos to your 2022 astrology horoscope forecast! ✨",
+    views: "189,243 views",
     creator: "Bracha Goldsmith",
+    subCount: "414K subscribers",
     creatorImg: "https://yt3.ggpht.com/ytc/AKedOLSOh6_8tn6i4fKS_hzpAfjRh6_yRlyKleQKxAbEvA=s88-c-k-c0x00ffffff-no-rj",
     category: "Horoscope 2022",
   },
@@ -225,7 +273,9 @@ export const videos = [
     title: "The 12 Best Traits Based on Your Zodiac Sign",
     description:
       "Listing down the best 12 traits of your zodiac Sign",
+    views: "864,345 views",
     creator: "MsMojo",
+    subCount: "4.56M subscribers",
     creatorImg: "https://yt3.ggpht.com/ytc/AKedOLTJ2h_arOtvqvKAFfjlhkDBX2qja1GqWsrJRhs8Yg=s88-c-k-c0x00ffffff-no-rj",
     category: "Fun Astro",
   },
@@ -234,7 +284,9 @@ export const videos = [
     title: "Interesting Facts About SAGITTARIUS Zodiac Sign",
     description:
       "Blunt, straightforward, ambitious, spontaneous, and always on the move, Sagittarius is one of the most dynamic and energetic signs in the Zodiac, always pursuing their goals with an enthusiasm few can match",
+    views: "888,563 views",
     creator: "Zodiac Talks",
+    subCount: "141K subscribers",
     creatorImg: "https://yt3.ggpht.com/ytc/AKedOLRPxRDyC_QlW1JvEbSXOM_ZxfDkx_-hTcyWiH4L-pg=s88-c-k-c0x00ffffff-no-rj",
     category: "Astro Facts",
   },
@@ -243,7 +295,9 @@ export const videos = [
     title: "Virgo 2022-2023 Annual Horoscope Forecast - Love is all around you!",
     description:
       "Welcome Virgos to your 2022 astrology horoscope forecast! ✨",
+    views: "140,097 views",
     creator: "Bracha Goldsmith",
+    subCount: "414K subscribers",
     creatorImg: "https://yt3.ggpht.com/ytc/AKedOLSOh6_8tn6i4fKS_hzpAfjRh6_yRlyKleQKxAbEvA=s88-c-k-c0x00ffffff-no-rj",
     category: "Horoscope 2022",
   },
@@ -252,7 +306,9 @@ export const videos = [
     title: "Top 10 Zodiac Signs That Don't Get Along",
     description:
       "Some signs you get along while some signs you dont, list of signs you might not get along",
+    views: "353,232 views",
     creator: "MsMojo",
+    subCount: "4.56M subscribers",
     creatorImg: "https://yt3.ggpht.com/ytc/AKedOLTJ2h_arOtvqvKAFfjlhkDBX2qja1GqWsrJRhs8Yg=s88-c-k-c0x00ffffff-no-rj",
     category: "Fun Astro",
   },
@@ -261,7 +317,9 @@ export const videos = [
     title: "Interesting Facts About VIRGO Zodiac Sign",
     description:
       "Virgos are often stereotyped as hysterical perfectionists who criticize everything and everyone, and while they can definitely be that at times, the truth is that this sign is far more complex and interesting.",
+    views: "246,232 views",
     creator: "Zodiac Talks",
+    subCount: "141K subscribers",
     creatorImg: "https://yt3.ggpht.com/ytc/AKedOLRPxRDyC_QlW1JvEbSXOM_ZxfDkx_-hTcyWiH4L-pg=s88-c-k-c0x00ffffff-no-rj",
     category: "Astro Facts",
   },
@@ -270,7 +328,9 @@ export const videos = [
     title: "Scorpio 2022-2023 Annual Horoscope Forecast - Dramatic Changes Coming!",
     description:
       "Welcome Scorpions to your 2022 astrology horoscope forecast! ✨",
+    views: "190,563 views",
     creator: "Bracha Goldsmith",
+    subCount: "414K subscribers",
     creatorImg: "https://yt3.ggpht.com/ytc/AKedOLSOh6_8tn6i4fKS_hzpAfjRh6_yRlyKleQKxAbEvA=s88-c-k-c0x00ffffff-no-rj",
     category: "Horoscope 2022",
   },
@@ -279,7 +339,9 @@ export const videos = [
     title: "The 12 Worst Habits Based on Your Sign",
     description:
       "It's time to find out the worst habits based on your sign. Our countdown includes phone addiction, oversharing, flakiness and more!",
+    views: "123,976 views",
     creator: "MsMojo",
+    subCount: "4.56M subscribers",
     creatorImg: "https://yt3.ggpht.com/ytc/AKedOLTJ2h_arOtvqvKAFfjlhkDBX2qja1GqWsrJRhs8Yg=s88-c-k-c0x00ffffff-no-rj",
     category: "Fun Astro",
   },
@@ -288,7 +350,9 @@ export const videos = [
     title: "Interesting Facts About GEMINI Zodiac Sign",
     description:
       "Fickle, friendly, enthusiastic, and moody. Geminis are famously known for their numerous contradictions and the ease with which they can change their minds. ",
+    views: "832,356 views",
     creator: "Zodiac Talks",
+    subCount: "141K subscribers",
     creatorImg: "https://yt3.ggpht.com/ytc/AKedOLRPxRDyC_QlW1JvEbSXOM_ZxfDkx_-hTcyWiH4L-pg=s88-c-k-c0x00ffffff-no-rj",
     category: "Astro Facts",
   },
@@ -297,7 +361,9 @@ export const videos = [
     title: "Pisces 2022-2023 Annual Horoscope Forecast - Wonderful Year Ahead!",
     description:
       "Welcome Pisceans to your 2022 astrology horoscope forecast! ✨",
+    views: "238,256 views",
     creator: "Bracha Goldsmith",
+    subCount: "414K subscribers",
     creatorImg: "https://yt3.ggpht.com/ytc/AKedOLSOh6_8tn6i4fKS_hzpAfjRh6_yRlyKleQKxAbEvA=s88-c-k-c0x00ffffff-no-rj",
     category: "Horoscope 2022",
   },
@@ -306,7 +372,9 @@ export const videos = [
     title: "zodiac signs as animal fails",
     description:
       "I've spent too much time watching animal videos because I've been thinking of adopting a cat! I get this is kind of a weird idea but we all love animals right? ",
+    views: "243,765 views",
     creator: "shookshack",
+    subCount: "46.5K subscribers",
     creatorImg: "https://yt3.ggpht.com/ytc/AKedOLTWGahklMz5h4JggX8gsPINi1Amy5J2pa49-uh-Zg=s88-c-k-c0x00ffffff-no-rj",
     category: "Fun Astro",
   },
@@ -315,7 +383,9 @@ export const videos = [
     title: "Interesting Facts About TAURUS Zodiac Sign",
     description:
       "Practical, reliable, and stubborn, this Zodiac sign is known for their patience and their laissez-faire attitude to life. ",
+    views: "974,825 views",
     creator: "Zodiac Talks",
+    subCount: "141K subscribers",
     creatorImg: "https://yt3.ggpht.com/ytc/AKedOLRPxRDyC_QlW1JvEbSXOM_ZxfDkx_-hTcyWiH4L-pg=s88-c-k-c0x00ffffff-no-rj",
     category: "Astro Facts",
   },
@@ -324,7 +394,9 @@ export const videos = [
     title: "Gemini 2022-2023 Annual Horoscope Forecast - The Future Looks Bright!",
     description:
       "Welcome Geminians to your 2022 astrology horoscope forecast! ✨",
+    views: "323,632 views",
     creator: "Bracha Goldsmith",
+    subCount: "414K subscribers",
     creatorImg: "https://yt3.ggpht.com/ytc/AKedOLSOh6_8tn6i4fKS_hzpAfjRh6_yRlyKleQKxAbEvA=s88-c-k-c0x00ffffff-no-rj",
     category: "Horoscope 2022",
   },

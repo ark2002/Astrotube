@@ -1,0 +1,59 @@
+.video__player {
+    width: 100%;
+}
+
+.video__title {
+    padding: 2rem 0;
+}
+
+.video__options {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.video__btns {
+    align-items: center;
+    gap: 2rem;
+}
+
+.video__recommendations {
+    width: 35%;
+    align-items: center;
+    gap: 2rem;
+}
+
+.video-creator__container {
+    width: 100%;
+    justify-content: space-between;
+}
+
+.video-creator__img {
+    width: 5rem;
+    border-radius: 50%;
+}
+
+.creator__details {
+    height: 100%;
+    justify-content: space-around;
+}
+
+.btn__subscribe {
+    background-color: #CC0000;
+    border: #ff0000;
+    padding: 1rem 4rem;
+    margin-left: auto;
+}
+
+.video__description {
+    font-size: 1.4rem;
+    padding: 2rem;
+    line-height: 2.2rem;
+    font-weight: 500;
+}
+
+hr.video__page--divider {
+    padding: 0;
+    background-color: var(--black-color);
+    height: 2px;
+    background-image: none;
+}

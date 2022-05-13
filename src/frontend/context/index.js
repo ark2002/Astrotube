@@ -4,4 +4,5 @@ export { ExploreProvider, UseExplore } from "./explore-context";
 export { FilterProvider, UseFilter } from "./filter-context";
 export { LikesProvider, useLikes } from "./likes-context";
 export { useWatchLater, WatchLaterProvider } from "./watchlater-context";
+export { HistoryProvider, useHistory } from "./history-context";
 export { ContextProvider } from "./contextProvider"

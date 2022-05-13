@@ -60,7 +60,7 @@ function Navbar() {
                             <NavLink to="/playlists"><span className="material-icons" title="Playlists">playlist_play</span></NavLink>
                         </li>
                         <li>
-                            <NavLink to="/likedvideos"><span className="material-icons nav-likes" title="Liked Videos">favorite_border</span></NavLink>
+                            <NavLink to="/likedvideos"><span className="material-icons nav-likes" title="Liked Videos">thumb_up</span></NavLink>
                         </li>
                         <li>
                             {theme === "light" ? <span className="material-icons" title="dark-mode" onClick={themeHandler}>dark_mode</span> :
@@ -77,7 +77,7 @@ function Navbar() {
                 <NavLink to="/signin" onClick={() => setListVisibility(!listVisibility)}><li>Sign-In</li></NavLink>
                 <NavLink to="/signup" onClick={() => setListVisibility(!listVisibility)}><li>Sign-Up</li></NavLink>
             </div> : <div className="dropdown-list secondary__font text__small">
-                <NavLink to="/playlists"><li><span>History</span></li></NavLink>
+                <NavLink to="/history"><li><span>History</span></li></NavLink>
                 <NavLink to="/"><li onClick={() => { signOutHandler(setAuth); setListVisibility(!listVisibility) }}>Log-Out</li></NavLink>
             </div>)}
         </>

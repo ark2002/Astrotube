@@ -1,5 +1,5 @@
 import { useState, useEffect, createContext, useContext } from "react";
-import axios from "axios";
+import { getExploreVideos } from "../services";
 
 const ExploreContext = createContext();
 
@@ -8,11 +8,11 @@ const ExploreProvider = ({ children }) => {
 
     useEffect(() => {
         (async () => {
-            try {
-                const { data } = await axios.get("/api/videos");
-                setVideos(data.videos);
-            } catch (err) {
-                console.error(err);
+            const response = await getExploreVideos();
+            if (response !== undefined) {
+                setVideos(response);
+            } else {
+                setVideos([]);
             }
         })();
     }, [])

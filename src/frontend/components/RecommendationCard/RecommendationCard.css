@@ -1,0 +1,27 @@
+.recommendation__container {
+    width: 100%;
+    cursor: pointer;
+}
+
+.recommendation__thumbnail {
+    width: 17rem
+}
+
+.recommendation__copy {
+    padding: 0.5rem;
+}
+
+.recommendation__title {
+    font-size: 1.4rem;
+}
+
+.recommendation__creator {
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 1rem 0;
+}
+
+.recommendation__views {
+    font-size: 1.2rem;
+    font-weight: 500;
+}

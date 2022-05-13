@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import { HistoryScreen, LandingScreen, LikedVideosScreen, ListingScreen, PageNotFoundScreen, PlaylistsScreen, SigninScreen, SignupScreen, WatchLaterScreen } from "../screens";
+import { HistoryScreen, LandingScreen, LikedVideosScreen, ListingScreen, PageNotFoundScreen, PlaylistsScreen, SigninScreen, SignupScreen, VideoScreen, WatchLaterScreen } from "../screens";
 import { PrivateRoute } from "../components";
 import { useAuth } from "../context";
 
@@ -11,7 +11,9 @@ const Router = () => {
         <Routes>
             <Route path="/" element={<LandingScreen />} />
             <Route path="/explore" element={<ListingScreen />} />
+            <Route path="/video/:videoId" element={<VideoScreen />} />
             <Route path="/history" element={<PrivateRoute><HistoryScreen /></PrivateRoute>} />
+
             {!isAuth && <>
                 <Route path="/signin" element={<SigninScreen />} />
                 <Route path="/signup" element={<SignupScreen />} />
