@@ -1,15 +1,17 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { useAuth, useHistory, useLikes, useWatchLater } from "../../context";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useAuth, useHistory, useLikes, usePlaylists, useWatchLater } from "../../context";
 import { addLikedVideo, addToHistory, addToWatchLater, deleteLikedVideo, deleteOneFromHistory } from "../../services";
 import "./ExplorePageCard.css"
 
 const ExplorePageCard = ({ video }) => {
-    const { _id, title, creator, creatorImg,views } = video;
+    const { _id, title, creator, creatorImg, views } = video;
     const { auth } = useAuth();
     const { likes, setLikes } = useLikes();
     const { watchLater, setWatchLater } = useWatchLater();
     const { history, setHistory } = useHistory();
+    const { dispatchPlaylists } = usePlaylists();
+    let location = useLocation();
     const [play, setPlay] = useState(false);
 
     const navigate = useNavigate();
@@ -68,6 +70,12 @@ const ExplorePageCard = ({ video }) => {
         navigate(`/video/${video._id}`);
     }
 
+    const playlistClickHandler = (video) => {
+        dispatchPlaylists({ type: "setCurrentVideo", payload: video })
+        navigate("/addToPlaylist", { replace: true, state: { from: location } })
+    }
+
+
     return (
 
         <div
@@ -111,7 +119,7 @@ const ExplorePageCard = ({ video }) => {
             }
             {
                 play && (
-                    <button className="btn btn-color--primary btn-font--secondary" onClick={(e) => e.stopPropagation()}>
+                    <button className="btn btn-color--primary btn-font--secondary" onClick={(e) => { e.stopPropagation(); playlistClickHandler(video); }}>
                         Add to Playlist
                     </button>
                 )
