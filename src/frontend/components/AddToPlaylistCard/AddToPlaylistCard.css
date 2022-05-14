@@ -1,0 +1,20 @@
+.playlistCard__container {
+    background-color: var(--white-color);
+    color: var(--black-color);
+    width: 90vw;
+    cursor: pointer;
+    box-shadow: var(--hover-color) 0px 6px 12px -2px, var(--hover-color) 0px 3px 7px -3px;
+}
+
+.playlist__img {
+    width: 25rem;
+}
+
+.playlistCard__details {
+    padding: 2rem 1rem;
+    gap: 2rem;
+    word-break: break-all;
+    max-height: 10rem;
+    overflow-y: hidden;
+    margin-bottom: 5px;
+}
