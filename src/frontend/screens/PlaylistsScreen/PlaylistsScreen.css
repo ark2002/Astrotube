@@ -1,0 +1,16 @@
+.playlist-videos__list {
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.playlist__page {
+    min-height: 90vh;
+}
+
+.playlist__heading {
+    text-align: center;
+    padding: 3rem;
+}
