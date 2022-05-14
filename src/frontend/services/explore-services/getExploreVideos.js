@@ -5,6 +5,6 @@ export const getExploreVideos = async () => {
         const { data } = await axios.get("/api/videos")
         return data.videos
     } catch (error) {
-        console.log(error)
+        console.error(error)
     }
 }
