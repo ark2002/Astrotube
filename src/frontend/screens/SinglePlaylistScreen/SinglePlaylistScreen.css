@@ -1,0 +1,49 @@
+.singleplaylist__container {
+    gap: 4rem;
+    min-height: 90vh;
+}
+
+.playlist-top__container {
+    padding: 2rem;
+    align-content: center;
+    gap: 1rem;
+    width: 40rem;
+    height: fit-content;
+    background-color: var(--white-color);
+    border-radius: 0 0 1rem 1rem;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.playlist__hero {
+    width: 40rem;
+}
+
+.playlist__rule {
+    padding: 0;
+    background-color: var(--black-color);
+    height: 2px;
+    width: 100%;
+    margin: 1rem 0;
+    background-image: none;
+}
+
+.playlist__details {
+    padding: 1rem 0 0 0;
+    width: 100%;
+    font-weight: 400;
+}
+
+.playlist__description {
+    font-size: 1.2rem;
+    width: 100%;
+    word-break: break-all;
+}
+
+.delete__playlist {
+    margin: 2rem 0 0 0;
+    width: fit-content;
+}
+
+.playlist__count {
+    font-size: 1.2rem;
+}

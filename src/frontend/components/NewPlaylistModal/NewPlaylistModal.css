@@ -1,0 +1,39 @@
+.modal__background {
+    background-color: var(--hover-color);
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    position: absolute;
+}
+
+.new-playlist__modal {
+    background-color: var(--white-color);
+    width: 30rem;
+    padding: 1.5rem;
+    box-shadow: #0000003d 0px 3px 8px;
+    position: inherit;
+    gap: 1.5rem;
+    top: 15%;
+    right: 38%;
+}
+
+.modal__heading {
+    text-align: center;
+    padding-bottom: 2px;
+    border-bottom: 1px solid var(--black-color);
+}
+
+.modal__name-field>input {
+    margin-top: 1rem;
+    width: 93%;
+    background-color: transparent;
+    color: var(--black-color);
+}
+
+.modal__description-field>textarea {
+    resize: none;
+    width: 93%;
+    height: 8rem;
+    background-color: transparent;
+    color: var(--black-color);
+}

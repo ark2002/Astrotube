@@ -1,0 +1,24 @@
+.addplaylist__page {
+    min-height: 90vh;
+    align-items: center;
+}
+
+.error__toast {
+    position: fixed;
+    color: #ffffff;
+    background-color: #ff0000;
+    font-weight: 400;
+    border: 1px solid var(--busy-color);
+    right: 0;
+    align-items: center;
+    gap: 1rem;
+    padding: 5px;
+}
+
+.error__toast>p {
+    width: 32rem;
+}
+
+.toast__close {
+    cursor: pointer;
+}

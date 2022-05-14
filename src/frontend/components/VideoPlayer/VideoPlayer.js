@@ -1,6 +1,6 @@
 import ReactPlayer from "react-player";
-import { useNavigate } from "react-router-dom";
-import { useAuth, useLikes, useWatchLater } from "../../context";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useAuth, useLikes, usePlaylists, useWatchLater } from "../../context";
 import { addLikedVideo, addToWatchLater, deleteLikedVideo } from "../../services";
 import "./VideoPlayer.css";
 
@@ -8,7 +8,9 @@ const VideoPlayer = ({ video }) => {
 
     const { _id, title, description, creatorImg, creator, views, subCount } = video;
     const { auth } = useAuth();
+    const { dispatchPlaylists } = usePlaylists();
     const { likes, setLikes } = useLikes();
+    let location = useLocation();
     const { watchLater, setWatchLater } = useWatchLater();
     const navigate = useNavigate();
 
@@ -39,6 +41,11 @@ const VideoPlayer = ({ video }) => {
         }
     }
 
+    const playlistClickHandler = (video) => {
+        dispatchPlaylists({ type: "setCurrentVideo", payload: video })
+        navigate("/addToPlaylist", { replace: true, state: { from: location } })
+    }
+
     return (
         <>
             <ReactPlayer
@@ -59,7 +66,7 @@ const VideoPlayer = ({ video }) => {
                     {watchLater.find((video) => video._id === _id) ?
                         <button className="btn btn-color--primary btn-font--secondary" onClick={() => navigate("/watchlater")}>go to watch later</button>
                         : <button className="btn btn-color--primary btn-font--secondary" onClick={() => { (auth.isAuth) ? addToWatchLaterHandler(video) : navigate("/signin") }}>add to watch later</button>}
-                    <button className="btn btn-color--tertiary btn-font--secondary">Add to Playlist</button>
+                    <button className="btn btn-color--tertiary btn-font--secondary" onClick={() => playlistClickHandler(video)}>Add to Playlist</button>
                 </div>
             </div>
             <hr className="video__page--divider" />

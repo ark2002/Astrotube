@@ -74,11 +74,11 @@ function Navbar() {
                 </nav>
             </header>
             {listVisibility && (!auth.isAuth ? <div className="dropdown-list secondary__font text__small">
-                <NavLink to="/signin" onClick={() => setListVisibility(!listVisibility)}><li>Sign-In</li></NavLink>
-                <NavLink to="/signup" onClick={() => setListVisibility(!listVisibility)}><li>Sign-Up</li></NavLink>
+                <NavLink to="/signin" onClick={() => setListVisibility(false)}><li>Sign-In</li></NavLink>
+                <NavLink to="/signup" onClick={() => setListVisibility(false)}><li>Sign-Up</li></NavLink>
             </div> : <div className="dropdown-list secondary__font text__small">
-                <NavLink to="/history"><li><span>History</span></li></NavLink>
-                <NavLink to="/"><li onClick={() => { signOutHandler(setAuth); setListVisibility(!listVisibility) }}>Log-Out</li></NavLink>
+                <NavLink to="/history"><li onClick={() => setListVisibility(false)}><span>History</span></li></NavLink>
+                <NavLink to="/"><li onClick={() => { signOutHandler(setAuth); setListVisibility(false) }}>Log-Out</li></NavLink>
             </div>)}
         </>
     );
