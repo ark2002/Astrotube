@@ -3,6 +3,7 @@ import { ExploreProvider } from "./explore-context";
 import { FilterProvider } from "./filter-context";
 import { HistoryProvider } from "./history-context";
 import { LikesProvider } from "./likes-context";
+import { PlaylistsProvider } from "./playlists-context";
 import { ThemeProvider } from "./theme-context";
 import { WatchLaterProvider } from "./watchlater-context";
 
@@ -17,14 +18,16 @@ const ContextProvider = ({ children }) => {
                         <LikesProvider>
                             <WatchLaterProvider>
                                 <HistoryProvider>
-                                    {children}
+                                    <PlaylistsProvider>
+                                        {children}
+                                    </PlaylistsProvider>
                                 </HistoryProvider>
                             </WatchLaterProvider>
                         </LikesProvider>
                     </FilterProvider>
                 </ExploreProvider>
             </AuthProvider>
-        </ThemeProvider>
+        </ThemeProvider >
     );
 }
 
