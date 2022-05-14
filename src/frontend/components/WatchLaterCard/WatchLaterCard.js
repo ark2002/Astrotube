@@ -1,5 +1,5 @@
-import { useNavigate } from "react-router-dom";
-import { useAuth, useHistory, useLikes, useWatchLater } from "../../context";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useAuth, useHistory, useLikes, usePlaylists, useWatchLater } from "../../context";
 import { addLikedVideo, addToHistory, deleteFromWatchLater, deleteLikedVideo, deleteOneFromHistory } from "../../services";
 import "./WatchlaterCard.css";
 
@@ -7,7 +7,9 @@ const WatchLaterCard = ({ video }) => {
 
     const { _id, title, description, creator, creatorImg } = video
     const { auth } = useAuth();
+    const { dispatchPlaylists } = usePlaylists();
     const { setWatchLater } = useWatchLater();
+    let location = useLocation();
     const { likes, setLikes } = useLikes();
     const { history, setHistory } = useHistory();
     const navigate = useNavigate();
@@ -66,6 +68,11 @@ const WatchLaterCard = ({ video }) => {
         navigate(`/video/${video._id}`);
     }
 
+    const playlistClickHandler = (video) => {
+        dispatchPlaylists({ type: "setCurrentVideo", payload: video })
+        navigate("/addToPlaylist", { replace: true, state: { from: location } })
+    }
+
     return (
         <div className="watchlater-video__container flex--row">
             <img src={`http://img.youtube.com/vi/${_id}/maxresdefault.jpg`} alt="thubmnail" className="thumbnail__img" onClick={() => videoClickHandler(video)} />
@@ -73,7 +80,7 @@ const WatchLaterCard = ({ video }) => {
                 <h2 className="video__name secondary__font">{title}</h2>
                 <p className="video__info secondary__font text__small">{description}</p>
                 <div className="video__copy-btns flex--row">
-                    <button className="btn btn-color--primary btn-font--secondary" >Add to Playlist</button>
+                    <button className="btn btn-color--primary btn-font--secondary" onClick={() => playlistClickHandler(video)} >Add to Playlist</button>
                     <button className="btn btn-font--secondary btn-transparent--primary" onClick={() => deleteFromWatchLaterHandler(_id)}>Delete from Watchlater</button>
                 </div>
             </div>
