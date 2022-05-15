@@ -1,0 +1,14 @@
+.error-page__container{
+    align-items: center;
+    height: 90vh;
+}
+
+.page__title{
+    align-items: center;
+    font-size: 15rem;
+    gap:1rem;
+}
+
+.page__hero{
+    width: 20rem;
+}

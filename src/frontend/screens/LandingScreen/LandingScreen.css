@@ -1,0 +1,38 @@
+.landing-page__container {
+    align-items: center;
+}
+
+.landing-page__hero {
+    height: 19%;
+    width: 19%;
+    min-width: 300px;
+    min-height: 300px;
+}
+
+.landing-page__title {
+    font-size: 7.2rem;
+    margin: 0;
+}
+
+.landing-page__description {
+    font-weight: 400;
+}
+
+.landing-page__button {
+    border: 1px solid var(--white-color);
+    background-color: var(--black-color);
+    color: var(--white-color);
+    font-weight: 500;
+    margin: 2rem 0;
+    padding: 0.5rem 2rem;
+    border-radius: 0.5rem;
+    font-size: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    cursor: pointer;
+}
+
+.landing-page__button:hover {
+    border: 1px solid var(--black-color);
+    background-color: var(--white-color);
+    color: var(--black-color);
+}
