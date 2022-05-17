@@ -4,26 +4,26 @@ import { getExploreVideos } from "../services";
 const ExploreContext = createContext();
 
 const ExploreProvider = ({ children }) => {
-    const [videos, setVideos] = useState([]);
+  const [videos, setVideos] = useState([]);
 
-    useEffect(() => {
-        (async () => {
-            const response = await getExploreVideos();
-            if (response !== undefined) {
-                setVideos(response);
-            } else {
-                setVideos([]);
-            }
-        })();
-    }, [])
+  useEffect(() => {
+    (async () => {
+      const response = await getExploreVideos();
+      if (response !== undefined) {
+        setVideos(response);
+      } else {
+        setVideos([]);
+      }
+    })();
+  }, []);
 
-    return (
-        <ExploreContext.Provider value={{ videos, setVideos }} >
-            {children}
-        </ExploreContext.Provider>
-    );
+  return (
+    <ExploreContext.Provider value={{ videos, setVideos }}>
+      {children}
+    </ExploreContext.Provider>
+  );
 };
 
 const UseExplore = () => useContext(ExploreContext);
 
-export { ExploreProvider, UseExplore }
+export { ExploreProvider, UseExplore };

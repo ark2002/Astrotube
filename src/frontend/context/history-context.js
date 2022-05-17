@@ -5,29 +5,28 @@ import { useAuth } from "./auth-context";
 const HistoryContext = createContext();
 
 const HistoryProvider = ({ children }) => {
+  const [history, setHistory] = useState([]);
+  const { auth } = useAuth();
 
-    const [history, setHistory] = useState([]);
-    const { auth } = useAuth();
-
-    useEffect(() => {
-        if (auth.isAuth) {
-            (async () => {
-                const response = await getHistory(auth.token);
-                if (response !== undefined) {
-                    setHistory(response);
-                } else {
-                    setHistory([]);
-                }
-            })()
+  useEffect(() => {
+    if (auth.isAuth) {
+      (async () => {
+        const response = await getHistory(auth.token);
+        if (response !== undefined) {
+          setHistory(response);
+        } else {
+          setHistory([]);
         }
-    }, [auth]);
+      })();
+    }
+  }, [auth]);
 
-    return (
-        <HistoryContext.Provider value={{ history, setHistory }}>
-            {children}
-        </HistoryContext.Provider>
-    );
-}
+  return (
+    <HistoryContext.Provider value={{ history, setHistory }}>
+      {children}
+    </HistoryContext.Provider>
+  );
+};
 
 const useHistory = () => useContext(HistoryContext);
 

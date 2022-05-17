@@ -5,29 +5,28 @@ import { getLikedVideo } from "../services";
 const LikesContext = createContext();
 
 const LikesProvider = ({ children }) => {
+  const [likes, setLikes] = useState([]);
+  const { auth } = useAuth();
 
-    const [likes, setLikes] = useState([]);
-    const { auth } = useAuth();
-
-    useEffect(() => {
-        if (auth.isAuth) {
-            (async () => {
-                const response = await getLikedVideo(auth.token);
-                if (response !== undefined) {
-                    setLikes(response);
-                } else {
-                    setLikes([]);
-                }
-            })();
+  useEffect(() => {
+    if (auth.isAuth) {
+      (async () => {
+        const response = await getLikedVideo(auth.token);
+        if (response !== undefined) {
+          setLikes(response);
+        } else {
+          setLikes([]);
         }
-    }, [auth])
+      })();
+    }
+  }, [auth]);
 
-    return (
-        <LikesContext.Provider value={{ likes, setLikes }}>
-            {children}
-        </LikesContext.Provider>
-    );
-}
+  return (
+    <LikesContext.Provider value={{ likes, setLikes }}>
+      {children}
+    </LikesContext.Provider>
+  );
+};
 
 const useLikes = () => useContext(LikesContext);
 

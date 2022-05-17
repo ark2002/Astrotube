@@ -1,22 +1,19 @@
-import React, { useState, useContext, createContext } from "react"
+import React, { useState, useContext, createContext } from "react";
 
 const AuthContext = createContext();
 
-
 const AuthProvider = ({ children }) => {
+  const [auth, setAuth] = useState({
+    isAuth: localStorage.getItem("AUTH_TOKEN") ? true : false,
+    token: localStorage.getItem("AUTH_TOKEN"),
+    userName: localStorage.getItem("USERNAME"),
+  });
 
-    const [auth, setAuth] = useState({
-        isAuth: localStorage.getItem("AUTH_TOKEN") ? true : false,
-        token: localStorage.getItem("AUTH_TOKEN"),
-        userName: localStorage.getItem("USERNAME"),
-    });
-
-
-    return (
-        <AuthContext.Provider value={{ auth, setAuth }}>
-            {children}
-        </AuthContext.Provider>
-    );
+  return (
+    <AuthContext.Provider value={{ auth, setAuth }}>
+      {children}
+    </AuthContext.Provider>
+  );
 };
 
 const useAuth = () => useContext(AuthContext);

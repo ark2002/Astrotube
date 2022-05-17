@@ -5,8 +5,8 @@
 .landing-page__hero {
     height: 19%;
     width: 19%;
-    min-width: 300px;
-    min-height: 300px;
+    min-width: 30rem;
+    min-height: 30rem;
 }
 
 .landing-page__title {
