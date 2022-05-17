@@ -1,1 +1,1 @@
-export { getExploreVideos } from "./getExploreVideos"
+export { getExploreVideos } from "./getExploreVideos";

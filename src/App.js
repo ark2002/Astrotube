@@ -5,9 +5,9 @@ import { Router } from "./frontend/router/router";
 function App() {
   return (
     <div className="App">
-      <Navbar/>
-      <Router/>
-      <Footer/>
+      <Navbar />
+      <Router />
+      <Footer />
     </div>
   );
 }
