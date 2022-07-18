@@ -27,3 +27,7 @@ header input {
     background-color: var(--white-color);
     color: var(--black-color);
 }
+
+li:hover>.dropdown-list {
+    font-weight: 400;
+}
