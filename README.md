@@ -40,7 +40,7 @@ https://user-images.githubusercontent.com/67817330/179536803-9921376c-87f3-45c9-
 
 ## Tech Stack
 
-**Client:** React, React Router, React Moment, Context API, [Astro UI](https://astro-ui.netlify.app/)
+**Client:** React, React Router, React Moment, Context API, React Player, [Astro UI](https://astro-ui.netlify.app/)
 
 **Server:** Mockbee (Mock Backend)
 
