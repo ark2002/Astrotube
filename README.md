@@ -1,5 +1,5 @@
 
-# [Astrotube](https://dino-tv.netlify.app/) | Video-Library App for Astroheads
+# [Astrotube](https://astrotube.netlify.app/) | Video-Library App for Astroheads
 
 A one place destination for all your Astro videos.
 
