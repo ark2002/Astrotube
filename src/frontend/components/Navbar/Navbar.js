@@ -1,12 +1,16 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useAuth, useTheme } from "../../context";
+import { useOnClickOutside } from "../../hooks";
 import "./Navbar.css";
 
 function Navbar() {
+  const ref = useRef();
   const [listVisibility, setListVisibility] = useState(false);
   const { auth, setAuth } = useAuth();
   const { theme, setTheme } = useTheme();
+
+  useOnClickOutside(ref, () => setListVisibility(false));
 
   const signOutHandler = (setAuth) => {
     localStorage.removeItem("AUTH_TOKEN");
@@ -99,45 +103,51 @@ function Navbar() {
                 </span>
               )}
             </li>
-            <li onClick={() => setListVisibility(!listVisibility)}>
+            <li onClick={() => setListVisibility(!listVisibility)} ref={ref}>
               <span className="material-icons account-icon" title="Account">
                 account_circle
               </span>
               <span className="font__primary text__small">{auth.userName}</span>
               ▼
+              {listVisibility &&
+                (!auth.isAuth ? (
+                  <div className="dropdown-list secondary__font text__small">
+                    <NavLink
+                      to="/signin"
+                      onClick={() => setListVisibility(false)}
+                    >
+                      <li>Sign-In</li>
+                    </NavLink>
+                    <NavLink
+                      to="/signup"
+                      onClick={() => setListVisibility(false)}
+                    >
+                      <li>Sign-Up</li>
+                    </NavLink>
+                  </div>
+                ) : (
+                  <div className="dropdown-list secondary__font text__small">
+                    <NavLink to="/history">
+                      <li onClick={() => setListVisibility(false)}>
+                        <span>History</span>
+                      </li>
+                    </NavLink>
+                    <NavLink to="/">
+                      <li
+                        onClick={() => {
+                          signOutHandler(setAuth);
+                          setListVisibility(false);
+                        }}
+                      >
+                        Log-Out
+                      </li>
+                    </NavLink>
+                  </div>
+                ))}
             </li>
           </ul>
         </nav>
       </header>
-      {listVisibility &&
-        (!auth.isAuth ? (
-          <div className="dropdown-list secondary__font text__small">
-            <NavLink to="/signin" onClick={() => setListVisibility(false)}>
-              <li>Sign-In</li>
-            </NavLink>
-            <NavLink to="/signup" onClick={() => setListVisibility(false)}>
-              <li>Sign-Up</li>
-            </NavLink>
-          </div>
-        ) : (
-          <div className="dropdown-list secondary__font text__small">
-            <NavLink to="/history">
-              <li onClick={() => setListVisibility(false)}>
-                <span>History</span>
-              </li>
-            </NavLink>
-            <NavLink to="/">
-              <li
-                onClick={() => {
-                  signOutHandler(setAuth);
-                  setListVisibility(false);
-                }}
-              >
-                Log-Out
-              </li>
-            </NavLink>
-          </div>
-        ))}
     </>
   );
 }
